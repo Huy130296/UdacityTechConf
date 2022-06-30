@@ -81,7 +81,7 @@ def notification():
             message = Message(str(notification.id))
             queue_client.send(messages=message)
 
-            send_email(app.config.get("ADMIN_EMAIL_ADDRESS"), notification.subject, notification.message)
+            send_email("huyaz010302@gmail.com", notification.subject, notification.message)
             # for attendee in attendees:
             #     subject = '{}: {}'.format(attendee.first_name, notification.subject)
             #     send_email(attendee.email, subject, notification.message)
