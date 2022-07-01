@@ -81,14 +81,14 @@ def notification():
             message = Message(str(notification.id))
             queue_client.send(messages=message)
 
-            send_email("huyaz010302@gmail.com", notification.subject, notification.message)
+            # send_email("huyaz010302@gmail.com", notification.subject, notification.message)
             # for attendee in attendees:
             #     subject = '{}: {}'.format(attendee.first_name, notification.subject)
             #     send_email(attendee.email, subject, notification.message)
 
-            notification.completed_date = datetime.utcnow()
-            notification.status = 'Notified {} attendees'.format(len(attendees))
-            db.session.commit()
+            # notification.completed_date = datetime.utcnow()
+            # notification.status = 'Notified {} attendees'.format(len(attendees))
+            # db.session.commit()
             # TODO Call servicebus queue_client to enqueue notification ID
 
             #################################################
